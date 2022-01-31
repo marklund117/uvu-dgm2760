@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Bed And Breakfast</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 id="company"></h1>
+        <h2 id="motto"></h2>
+    </header>
+    <main>
+        <h1 id="pagename"></h1>
+        <h2>Learning Objectives Completed:</h2>
+        <ul class="learningobjectives">
+            <li>Install and use Visual Studio Code for web development.</li>
+            <li>Create a modern HTML page with linked JS and CSS files.</li>
+            <li>Create a proper header with a background image.</li>
+            <li>Dynamically alter page data by inserting data using JavaScript.</li>
+            <li>Use the built in prompt method to ask for and process user input.</li>
+            <li>Push web pages to GitHub and deploy using Netlify.</li>
+        </ul>
+        <h2>
+            Today Is
+
+            <script>
+                let thedate = new Date()
+                document.write(thedate.toLocaleDateString())
+            </script>
+        </h2>
+        <p id="hellothere"></p>
+    </main>
+    <footer>
+        <p>DGM 2760 assignment by Mark Lund</p>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
