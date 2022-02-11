@@ -49,6 +49,7 @@ main h1 {
 main h2 {
     padding-left: 2rem;
     color: #a11cad;
+    height: 5px;
 }
 
 main p {
@@ -59,7 +60,7 @@ main p {
 footer {
     max-width: 960px;
     margin: 0 auto;
-    background-color: #79c9bb;
+    background-color: #db95ec;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     text-align: center;

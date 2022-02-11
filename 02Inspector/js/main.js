@@ -10,7 +10,7 @@ function reDisplay() {
 let windowSizes = `Window size is currently ${window.innerWidth} px wide by ${window.innerHeight} px tall`
 
 // let's look at offset - getting the X and Y values
-let offset = `Window is offset is currently ${window.screenX} from the left edge and ${window.screenY} from the top edge`
+let offset = `Window offset is currently ${window.screenX} from the left edge and ${window.screenY} from the top edge`
 
 // set inner text of paragraph under window properties to show those values
 let mainWindow = document.querySelector('#mainWindow').innerText = windowSizes + '\n' + offset
@@ -23,6 +23,12 @@ let windowAreaString = `The Window currently contains ${windowArea} pixels`
 
 // set inner text of paragraph under window properties to show area too
 let showWindowArea = document.querySelector('#windowArea').innerText = windowAreaString
+
+// show URL
+let showURL = document.querySelector('#url').innerText = `The URL of this page is ${document.URL}`
+
+// show doc title and when it was last modified with some stuff I googled up on MDN
+let showTitle = document.querySelector('#mainDocument').innerText = `The title of this document is ${document.title} \n This document was last updated ${document.lastModified}`
 }
 
 // load it up upon landing
