@@ -25,7 +25,7 @@ let currentGuess = 0
 function checkGuess() {
     // console.log('button clicked')
 
-    guessTotal++ // add 1 to tries
+    if (!userWins) {guessTotal++}// add 1 to tries if they havent won yet
     const visibletries = document.querySelector('#tries') // easy way to modify
 
     currentGuess = document.querySelector('#guesser').value // what they put in
@@ -39,7 +39,9 @@ function checkGuess() {
             // here's what happens when they win
             response.innerText = "You Win!"
             console.log("you win gg")
+            userWins = true // now that theyve won make this true
             giveRibbon(guessTotal) // give em a ribbon with total guesses in mind
+
         } else if (currentGuess > correctNumber ) { // if too high...
             console.log("too high")
             response.innerText = "Too high, try again."
@@ -48,11 +50,11 @@ function checkGuess() {
             response.innerText = "Too low, try again."
         }
 
-    // ok but what if the guess is not in range    
+    // ok but what if the guess is not in range
     } else {
         console.log("out of range")
         response.innerText = "Out of range, guess an integer between 1 and 15."
-        guessTotal-- // don't count out of range guesses
+        if (!userWins) {guessTotal-- } // don't count out of range guesses (but dont change if they won)
     }
     if (guessTotal > 0) {visibletries.innerText = guessTotal} // display try count, only if not 0
 }
