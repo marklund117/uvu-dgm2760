@@ -24,8 +24,64 @@ let currentGuess = 0
 
 function checkGuess() {
     // console.log('button clicked')
-    guessTotal++
+
+    guessTotal++ // add 1 to tries
+    const visibletries = document.querySelector('#tries') // easy way to modify
+
     currentGuess = document.querySelector('#guesser').value // what they put in
 
-    const response = document.querySelector('#feedback') // 
+    const response = document.querySelector('#tellthem') // make it easy to access
+
+    if (currentGuess <= 15 && currentGuess >= 1) { // check to make sure the guess is within the rules
+
+        // if the guess is in range...
+        if (currentGuess == correctNumber) { // abstract equality, auto converts str
+            // here's what happens when they win
+            response.innerText = "You Win!"
+            console.log("you win gg")
+            giveRibbon(guessTotal) // give em a ribbon with total guesses in mind
+        } else if (currentGuess > correctNumber ) { // if too high...
+            console.log("too high")
+            response.innerText = "Too high, try again."
+        } else if (currentGuess < correctNumber) { // if too low....
+            console.log("too low")
+            response.innerText = "Too low, try again."
+        }
+
+    // ok but what if the guess is not in range    
+    } else {
+        console.log("out of range")
+        response.innerText = "Out of range, guess an integer between 1 and 15."
+        guessTotal-- // don't count out of range guesses
+    }
+    if (guessTotal > 0) {visibletries.innerText = guessTotal} // display try count, only if not 0
+}
+
+function giveRibbon (guesses) { // take in a parameter to be a little more general purpose
+
+    const awardImage = document.createElement('img') // create an img element
+    const ribbondiv = document.querySelector('#ribbonpic') // grab the div
+    
+
+    switch (guesses) { // honestly i'd rather use if/else than switch but might as well
+        case 1:
+        case 2:
+        case 3:
+            console.log("blueribbon event") // for 1-3 guesses
+            awardImage.setAttribute('src', 'images/bluerib.png') // set to the blue ribbon
+            break;
+        case 4:
+        case 5:
+        case 6:
+            console.log("redribbon event") // for 4-6
+            awardImage.setAttribute('src', 'images/redrib.png') // set to the red ribbon
+            break;
+        default:
+            console.log("yellowribbon event") // for 7+
+            awardImage.setAttribute('src', 'images/yellowrib.png') // set to the yellow ribbon
+            break;
+    }
+
+if (ribbondiv.childElementCount == 0) {ribbondiv.appendChild(awardImage)} // add it to the div, only if theres not already one
+
 }

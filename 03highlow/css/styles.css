@@ -82,7 +82,7 @@ div.gamelist h2 {
     margin: 0;
 }
 input#guesser {
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 8rem;
     height: 2rem;
     font-size: 1rem;
@@ -90,7 +90,23 @@ input#guesser {
 }
 div.gamelist button {
     width: 8rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     height: 2rem;
     text-align: center;
+}
+div.gamelist p {
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+div.gamelist h2#tries {
+    color: darkred;
+    margin: auto;
+    font-size: 3rem;
+}
+div#ribbonpic img {
+    height: 10rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
 }
