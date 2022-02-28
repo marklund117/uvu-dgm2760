@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High/Low Guessing Game</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <h2></h2>
+    </header>
+    <main>
+        <h1>High/Low Guessing Game</h1>
+        <h2>What I learned</h2>
+        <ul id="objectives">
+            <li>How to generate random numbers with JS</li>
+            <li>How to implement if/then logic with JS</li>
+            <li>How to use the onclick event</li>
+        </ul>
+        <h1>Instructions</h1>
+        <p>Guess a number between 1 and 15 in as few tries as possible. To play again, refresh the page.</p>
+        
+        <div id="gamearea">
+            <div class=gamelist id="play"><h2>Play</h2>
+                <input id="guesser" type="number" placeholder="number">
+                <button onclick="checkGuess()">Guess</button>
+            </div>
+            <div class=gamelist><h2>Tries</h2></div>
+            <div class=gamelist id="feedback"><h2>Feedback</h2></div>
+            <div class=gamelist><h2>Ribbons</h2></div>
+        </div>
+    </main>
+    
+    
+</body>
+<footer> Assignment for DGM 2760 by Mark Lund</footer>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
