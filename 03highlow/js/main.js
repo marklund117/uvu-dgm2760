@@ -70,17 +70,17 @@ function giveRibbon (guesses) { // take in a parameter to be a little more gener
         case 2:
         case 3:
             console.log("blueribbon event") // for 1-3 guesses
-            awardImage.setAttribute('src', '../images/bluerib.png') // set to the blue ribbon
+            awardImage.setAttribute('src', '../03highlow/images/bluerib.png') // set to the blue ribbon
             break;
         case 4:
         case 5:
         case 6:
             console.log("redribbon event") // for 4-6
-            awardImage.setAttribute('src', '../images/redrib.png') // set to the red ribbon
+            awardImage.setAttribute('src', '../03highlow/images/redrib.png') // set to the red ribbon
             break;
         default:
             console.log("yellowribbon event") // for 7+
-            awardImage.setAttribute('src', '../images/yellowrib.png') // set to the yellow ribbon
+            awardImage.setAttribute('src', '../03highlow/images/yellowrib.png') // set to the yellow ribbon
             break;
     }
 
