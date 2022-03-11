@@ -11,17 +11,17 @@ header {
 header h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    text-shadow: 1px 1px orangered;
+    text-shadow: 1px 1px green;
 }
 header h2 {
     margin-top: 1.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    text-shadow: 1px 1px orangered;
+    text-shadow: 1px 1px green;
 }
 footer {
     padding: 1rem;
-    background-color: purple;
+    background-color: green;
     color: white;
     font-family: sans-serif;
     text-align: center;
@@ -29,22 +29,20 @@ footer {
 
 main h1 {
     font-family: sans-serif;
-    color: purple;
-    margin-left: 2rem;
+    color: green;
     margin-top: 1rem;
 }
 main h2 {
-    color: orangered;
+    color: yellowgreen;
     margin-top: 2rem;
     font-family: sans-serif;
-    margin-left: 2rem;
 }
 main ul {
     text-decoration: none;
     font-family: monospace;
     font-size: 1.2rem;
-    margin-left: 1rem;
     margin-bottom: 1rem;
+    margin-left: -1rem;
 }
 main p {
     font-family: sans-serif;
