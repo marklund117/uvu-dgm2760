@@ -4,7 +4,7 @@
 }
 
 header {
-    background-image: url(../images/ponder.png);
+    background-image: url(../images/greenleaves.png);
     height: 6rem;
     padding: 2rem;
 }
@@ -21,16 +21,42 @@ header h2 {
 }
 footer {
     padding: 1rem;
-    background-color: green;
+    background-color: rgb(87, 109, 87);
     color: white;
     font-family: sans-serif;
     text-align: center;
 }
-
+div#mainblock {
+    display: flex;
+    flex-direction: row;
+}
+div#leftside {
+    margin-left: 0;
+    flex-direction: column;
+}
+div.buttonblock {
+    display: flex;
+    flex-direction: column;
+}
+div.buttonblock button {
+    margin-left: 0;
+    color: rgb(25, 131, 69);
+    font-size: 1.1rem;
+    padding: 0.3rem;
+    border-radius: 0rem;
+    box-shadow: 2px 2px rgb(218, 233, 230);
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    width: 20rem;
+}
+div.buttonblock button:hover {
+    background-color: rgb(196, 214, 204);
+}
 main h1 {
     font-family: sans-serif;
     color: green;
     margin-top: 1rem;
+    text-align: left;
 }
 main h2 {
     color: yellowgreen;
