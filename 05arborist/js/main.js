@@ -6,7 +6,7 @@ document.querySelector('header > h1').textContent = "Arborist"
 document.querySelector('header > h2').textContent = "Events and Arrays"
 
 // Array with 4 trees listed
-const trees = ['Avocado', 'Magnolia', 'Fir', 'Birch']
+const trees = ['Magnolia', 'Fir', 'Birch', 'Avocado']
 // reference to display div
 const treeList = document.querySelector('#treelist')
 // reference to error div
@@ -41,14 +41,22 @@ document.querySelector('#addPeachStart').onclick = () => {
 
 // third button - remove first tree no matter what it is
 document.querySelector('#removeTreeFirst').onclick = () => {
+    if (trees.length > 0) {
     trees.shift()
     displayTrees()
+    } else {
+        errorDiv.textContent = 'Cannot remove first tree if there are no trees'
+    }
 }
 
 // fourth button - remove second tree no matter what it is
 document.querySelector('#removeTreeSecond').onclick = () => {
-    trees.splice(1, 1) // i wonder if this works
-    displayTrees()
+    if (trees.length > 1) {
+        trees.splice(1, 1) // i wonder if this works
+        displayTrees()
+        } else {
+            errorDiv.textContent = 'Cannot remove second tree if there are not at least 2 trees'
+        }
 }
 
 // fifth button - remove last tree no matter what it is
@@ -59,25 +67,31 @@ document.querySelector('#removeTreeLast').onclick = () => {
 
 // sixth button - sort trees a->z
 document.querySelector('#sortTrees').onclick = () => {
-    trees.pop()
+    trees.sort()
     displayTrees()
 }
 
 // seventh button - convert all tree names to lowercase
 document.querySelector('#lowerTrees').onclick = () => {
-    trees.pop()
-    displayTrees()
+    // define a string that will store the lowercasedisplay
+    let treeStringLow = ''
+    // this used to be a for loop but its more modern to use forEach with an arrow
+    trees.forEach(tree => {
+        // honestly i'd like it better if this was permanent, this seems like i'm on the wrong idea
+        treeStringLow += `${tree.toLowerCase()} <br>`
+    })
+    treeList.innerHTML = `${treeStringLow} <span>${trees.length} elements long</span>`
 }
 
 // eighth button - whats the name of tree 3
 document.querySelector('#removeTreeLast').onclick = () => {
-    trees.pop()
+
     displayTrees()
 }
 
 // ninth button - whats the name of tree 4
 document.querySelector('#removeTreeLast').onclick = () => {
-    trees.pop()
+
     displayTrees()
 }
 
