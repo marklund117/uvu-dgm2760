@@ -59,7 +59,7 @@ main h1 {
     text-align: left;
 }
 main h2 {
-    color: yellowgreen;
+    color: rgb(31, 85, 85);
     margin-top: 2rem;
     font-family: sans-serif;
 }
@@ -76,5 +76,27 @@ main p {
     margin-left: 2rem;
     max-width: 33rem;
     margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+div#treelist {
+    color: rgb(14, 61, 14);
+    margin-top: 1rem;
+    font-family: monospace;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(196, 214, 204);
+    border-radius: 0.3rem;
+}
+div#treelist span {
+    color: darkblue;
+    font-size: 1.2rem;
+}
+div#error {
+    color: rgb(255, 30, 0);
+    font-family: monospace;
+    font-size: 1.5rem;
+    background-color: rgb(228, 228, 228);
+    padding: 1rem;
+    border-radius: 0.3rem;
     margin-top: 1rem;
 }
