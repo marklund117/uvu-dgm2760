@@ -60,9 +60,13 @@ document.querySelector('#removeTreeSecond').onclick = () => {
 }
 
 // fifth button - remove last tree no matter what it is
-document.querySelector('#removeTreeLast').onclick = () => {
-    trees.pop()
-    displayTrees()
+document.querySelector('#removeTreeFinal').onclick = () => {
+    if (trees.length > 0) {
+        trees.pop()
+        displayTrees()
+        } else {
+            errorDiv.textContent = 'Cannot remove last tree if there are no trees'
+        }
 }
 
 // sixth button - sort trees a->z
@@ -83,17 +87,7 @@ document.querySelector('#lowerTrees').onclick = () => {
     treeList.innerHTML = `${treeStringLow} <span>${trees.length} elements long</span>`
 }
 
-// eighth button - whats the name of tree 3
-document.querySelector('#removeTreeLast').onclick = () => {
 
-    displayTrees()
-}
-
-// ninth button - whats the name of tree 4
-document.querySelector('#removeTreeLast').onclick = () => {
-
-    displayTrees()
-}
 
 
 // lets get going
