@@ -71,25 +71,45 @@ document.querySelector('#removeTreeFinal').onclick = () => {
 
 // sixth button - sort trees a->z
 document.querySelector('#sortTrees').onclick = () => {
+    if (trees.length > 0) {
     trees.sort()
     displayTrees()
+    } else {
+        errorDiv.textContent = 'Cannot sort trees if there are no trees'
+    }
 }
 
 // seventh button - convert all tree names to lowercase
 document.querySelector('#lowerTrees').onclick = () => {
-    // define a string that will store the lowercasedisplay
-    let treeStringLow = ''
-    // this used to be a for loop but its more modern to use forEach with an arrow
-    trees.forEach(tree => {
-        // honestly i'd like it better if this was permanent, this seems like i'm on the wrong idea
-        treeStringLow += `${tree.toLowerCase()} <br>`
-    })
-    treeList.innerHTML = `${treeStringLow} <span>${trees.length} elements long</span>`
+    // there's probably a more elegant way to do this than a for loop
+    if (trees.length > 0 ) {
+    for (let i = 0; i < trees.length; i++) {
+        trees[i] = trees[i].toLowerCase()
+    }
+    displayTrees()
+    } else {
+        errorDiv.textContent = 'Cannot make all trees lowercase if there are no trees'
+    }
 }
 
+// eighth button - whats 3
+document.querySelector('#whatsThree').onclick = () => {
+    if (trees.length > 2) {
+    errorDiv.textContent = `The third tree is named ${trees[2]}`
+    } else {
+        errorDiv.textContent = 'Cannot display third tree if there not at least three trees'
+    }
+}
 
+// ninth button - whats 4
+document.querySelector('#whatsFour').onclick = () => {
+    if (trees.length > 3) {
+    errorDiv.textContent = `The fourth tree is named ${trees[3]}`
+    } else {
+        errorDiv.textContent = 'Cannot display fourth tree if there not at least four trees'
+    }
+}
 
-
-// lets get going
+// initial display
 displayTrees()
 
