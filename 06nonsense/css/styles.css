@@ -26,14 +26,6 @@ footer {
     font-family: sans-serif;
     text-align: center;
 }
-div#mainblock {
-    display: flex;
-    flex-direction: row;
-}
-div#leftside {
-    margin-left: 0;
-    flex-direction: column;
-}
 div.buttonblock {
     display: flex;
     flex-direction: column;
