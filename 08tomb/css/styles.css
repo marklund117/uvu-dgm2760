@@ -87,3 +87,12 @@ div#stem {
     font-family: monospace;
     text-align: center;
 }
+p.feedback {
+    background-color: rgb(223, 216, 199);
+    padding: 1rem;
+    width: 26rem;
+    margin-left: 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
