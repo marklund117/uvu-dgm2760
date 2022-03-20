@@ -5,5 +5,6 @@ document.querySelector('header > h1').textContent = "Ancient Tomb"
 // fill text of header h2
 document.querySelector('header > h2').textContent = "Object Literals"
 
+// now we need to create an object
 
 
