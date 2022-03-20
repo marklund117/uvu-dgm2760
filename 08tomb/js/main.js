@@ -30,7 +30,7 @@ const question = {
             document.querySelector(".feedback").textContent = "You are correct!"
         } else {
             // if they guessed wrong
-            document.querySelector(".feedback").textContent = "Incorrect."
+            document.querySelector(".feedback").textContent = "Incorrect. Try again."
         }
     }
 }
