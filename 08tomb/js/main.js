@@ -15,6 +15,7 @@ const question = {
     option4: "Mummies",
     correct: 2,
     // methods
+    // display question method
     display: () => {
         document.querySelector('#stem').textContent = question.stem
         document.querySelector('#button1').textContent = question.option1
@@ -22,22 +23,25 @@ const question = {
         document.querySelector('#button3').textContent = question.option3
         document.querySelector('#button4').textContent = question.option4  
     },
+    // check if they answered correctly
     check: (userChoice) => {
         if (userChoice === question.correct) {
+            // if they guessed right
             document.querySelector(".feedback").textContent = "You are correct!"
         } else {
+            // if they guessed wrong
             document.querySelector(".feedback").textContent = "Incorrect."
         }
     }
 }
 
-// listen for click
+// listen for click on each button, then check
 document.querySelector('#button1').addEventListener('click', () => question.check(1))
 document.querySelector('#button2').addEventListener('click', () => question.check(2))
 document.querySelector('#button3').addEventListener('click', () => question.check(3))
 document.querySelector('#button4').addEventListener('click', () => question.check(4))
 
-// display on page load
+// display question on page load
 question.display()
 
 
