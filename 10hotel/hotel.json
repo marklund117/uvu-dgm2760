@@ -1,0 +1,12 @@
+{
+    "hotels": [
+        {
+            "name": "Comfort Inn",
+            "rooms": "75",
+            "gym": "No",
+            "roomtypes": ["Queen", "Double", "Penthouse"],
+            "address": "727 North Blue Peak Road",
+            "picture": "comfort.jpg"
+        }
+    ]
+}
