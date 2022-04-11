@@ -31,8 +31,6 @@ allButtons.forEach(button => {
    button.addEventListener('click', displayHotelInfo)  
 })
 
-// document.querySelector("#hilton").addEventListener('click', displayHotelInfo)
-
 function displayHotelInfo(event) { // takes an event
     let hotelChoice = hotelData.hotels.find(hotel => {
         return event.target.id === hotel.name.toLowerCase() // compare without case sensitivity
@@ -52,11 +50,7 @@ function displayHotelInfo(event) { // takes an event
     document.querySelector('#gym').textContent = `${hotelChoice.gym}`
 
     // fill in the types of rooms
-    document.querySelector('#type').textContent = `${hotelChoice.roomtypes}`
-
-    
-
-    
+    document.querySelector('#type').textContent = `${hotelChoice.roomtypes}` 
 }
 
 
