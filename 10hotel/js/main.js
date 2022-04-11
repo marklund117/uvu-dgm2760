@@ -50,7 +50,10 @@ function displayHotelInfo(event) { // takes an event
     document.querySelector('#gym').textContent = `${hotelChoice.gym}`
 
     // fill in the types of rooms
-    document.querySelector('#type').textContent = `${hotelChoice.roomtypes}` 
+    document.querySelector('#type').textContent = `${hotelChoice.roomtypes}`
+
+    // fill in image
+    document.querySelector('#picture').src=`../images/${hotelChoice.picture}`
 }
 
 

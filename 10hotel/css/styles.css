@@ -92,6 +92,8 @@ p.fancy span {
     color: rgb(255, 255, 255);
     margin-left: 1rem;
 }
-main#picture {
-    width: 20rem;
+main img {
+    width: 28rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
 }
