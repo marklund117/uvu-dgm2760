@@ -74,7 +74,7 @@ div.buttonblock button {
     box-shadow: 2px 2px rgb(233, 218, 228);
     border-radius: 0.2rem;
     margin-bottom: 0.5rem;
-    width: 10rem;
+    width: 18rem;
 }
 div.buttonblock button:hover {
     background-color: rgb(190, 193, 211);

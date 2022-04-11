@@ -5,8 +5,24 @@
             "rooms": "75",
             "gym": "No",
             "roomtypes": ["Queen", "Double", "Penthouse"],
-            "address": "727 North Blue Peak Road",
+            "address": "727 North Blue Zenith Road",
             "picture": "comfort.jpg"
+        },
+        {
+            "name": "Hilton",
+            "rooms": "120",
+            "gym": "Yes",
+            "roomtypes": ["King","Queen", "Double"],
+            "address": "2009 East Starsky Lookout",
+            "picture": "hilton.jpg"
+        },
+        {
+            "name": "Hyatt",
+            "rooms": "250",
+            "gym": "Yes",
+            "roomtypes": ["King","Queen", "Double", "Executive"],
+            "address": "1337 South Playwright Place",
+            "picture": "hyatt.jpg"
         }
     ]
 }
