@@ -80,13 +80,17 @@ div.buttonblock button:hover {
     background-color: rgb(190, 193, 211);
 }
 p.fancy {
-    background-color: rgb(172, 179, 202);
+    background-color: rgb(142, 150, 180);
     padding: 1rem;
     width: 26rem;
     margin-left: 0;
     border-radius: 0.5rem;
     text-align: left;
     margin-bottom: 0;
+}
+p.fancy span {
+    color: rgb(255, 255, 255);
+    margin-left: 1rem;
 }
 main#picture {
     width: 20rem;
