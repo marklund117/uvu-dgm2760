@@ -9,7 +9,7 @@ document.querySelector('header > h2').textContent = "Complete with tiny shampoo 
 //async function - this could be made even more general by passing in a URL 
 async function getHotelData() {
     try {
-        const response = await fetch('../hotel.json') // await the result of the fetch call
+        const response = await fetch('https://marklund2760.netlify.app/10hotel/hotel.json') // await the result of the fetch call (NEW URL)
         return await response.json() // await converting the response to JSON instead of giving us everything
     } catch(error) {
         console.error(error) // send the error to the console if it fails
