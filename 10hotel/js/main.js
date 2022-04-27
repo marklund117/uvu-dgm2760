@@ -53,7 +53,7 @@ function displayHotelInfo(event) { // takes an event
     document.querySelector('#type').textContent = `${hotelChoice.roomtypes}`
 
     // fill in image
-    document.querySelector('#picture').src=`../images/${hotelChoice.picture}`
+    document.querySelector('#picture').src=`images/${hotelChoice.picture}`
 }
 
 
